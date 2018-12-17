@@ -5,10 +5,8 @@ import com.yingyinggroup.yinghuo.open.loan.request.BankCardBindingNotificationDT
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.servlet.http.HttpServletRequest;
-
 /**
- * API tests for GasolineApiTest
+ * API tests for LoanWebHookApi
  */
 public class LoanWebHookApiTest {
     public static final String host = "http://localhost:8090";
@@ -19,7 +17,6 @@ public class LoanWebHookApiTest {
 
     @Before
     public void setup() {
-        HttpServletRequest a;
         loanWebHookApi = new LoanApiClient(host, APP_KEY, APP_SECRET)
                 .buildClient(LoanWebHookApi.class);
     }
