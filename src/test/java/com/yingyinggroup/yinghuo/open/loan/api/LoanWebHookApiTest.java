@@ -26,7 +26,7 @@ public class LoanWebHookApiTest {
     public void notifyBankCardBindStatusTest() {
         BankCardBindingNotificationDTO bankCardBindingNotificationDTO = new BankCardBindingNotificationDTO()
                 .setOrderNo("123");
-        loanWebHookApi.notifyBankCardBindStatus(bankCardBindingNotificationDTO);
+        //loanWebHookApi.notifyBankCardBindStatus(bankCardBindingNotificationDTO);
         System.out.println("success");
     }
 

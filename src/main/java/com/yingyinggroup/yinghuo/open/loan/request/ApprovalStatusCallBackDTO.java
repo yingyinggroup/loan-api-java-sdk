@@ -16,7 +16,7 @@ public class ApprovalStatusCallBackDTO implements Serializable {
     private String orderNo;
 
     @ApiModelProperty(notes = "审核状态", required = true)
-    private String approvalStatus;
+    private int approvalStatus;
 
     @ApiModelProperty(notes = "审核金额", required = true)
     private Long approvalAmount;
@@ -36,7 +36,7 @@ public class ApprovalStatusCallBackDTO implements Serializable {
     @ApiModelProperty(notes = "利率类型", required = true)
     private int rateType;
 
-    @ApiModelProperty(notes = "审核结果说明", required = true)
+    @ApiModelProperty(notes = "审核结果说明", required = false)
     private String remark;
 
     @Override
