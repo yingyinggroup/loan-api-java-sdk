@@ -18,6 +18,9 @@ public class ApprovalStatusCallBackDTO implements Serializable {
     @ApiModelProperty(notes = "审核状态", required = true)
     private String approvalStatus;
 
+    @ApiModelProperty(notes = "审核金额", required = true)
+    private Long approvalAmount;
+
     @ApiModelProperty(notes = "审核时间(YYYY-MM-dd HH:mm:ss)", required = true)
     private String approvalTime;
 
@@ -41,6 +44,7 @@ public class ApprovalStatusCallBackDTO implements Serializable {
         StringBuilder sb = new StringBuilder("ApprovalStatusCallBackDTO{");
         sb.append("orderNo='").append(orderNo).append('\'');
         sb.append("approvalStatus='").append(approvalStatus).append('\'');
+        sb.append("approvalAmount='").append(approvalAmount).append('\'');
         sb.append("approvalTime='").append(approvalTime).append('\'');
         sb.append("term='").append(term).append('\'');
         sb.append("termType='").append(termType).append('\'');
