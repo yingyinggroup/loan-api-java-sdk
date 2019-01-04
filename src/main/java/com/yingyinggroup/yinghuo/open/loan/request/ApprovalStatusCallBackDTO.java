@@ -9,7 +9,6 @@ import java.io.Serializable;
 
 @ApiModel(description = "审核结果DTO")
 @Data
-@AllArgsConstructor
 public class ApprovalStatusCallBackDTO implements Serializable {
 
     @ApiModelProperty(notes = "订单号", required = true)

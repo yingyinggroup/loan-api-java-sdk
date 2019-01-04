@@ -10,7 +10,6 @@ import java.util.List;
 
 @ApiModel(description = "订单状态DTO")
 @Data
-@AllArgsConstructor
 public class OrderStatusCallBackDTO implements Serializable {
 
     @ApiModelProperty(notes = "订单号", required = true)
@@ -21,6 +20,18 @@ public class OrderStatusCallBackDTO implements Serializable {
 
     @ApiModelProperty(notes = "放款金额", required = false)
     private Long amount;
+
+    @ApiModelProperty(notes = "总应还款金额", required = false)
+    private Long totalRepayAmount;
+
+    @ApiModelProperty(notes = "总服务费", required = false)
+    private Long totalFee;
+
+    @ApiModelProperty(notes = "总本金", required = false)
+    private Long totalPrincipal;
+
+    @ApiModelProperty(notes = "总利息", required = false)
+    private Long totalInterest;
 
     @ApiModelProperty(notes = "状态变更时间(YYYY-MM-dd HH:mm:ss)", required = true)
     private String updateTime;

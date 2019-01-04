@@ -9,7 +9,6 @@ import java.io.Serializable;
 
 @ApiModel(description = "审核结果DTO")
 @Data
-@AllArgsConstructor
 public class RepaymentPlanDTO implements Serializable {
 
     @ApiModelProperty(notes = "当前期数", required = true)
