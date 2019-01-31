@@ -2,7 +2,6 @@ package com.yingyinggroup.yinghuo.open.loan.request;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -20,26 +19,29 @@ public class RepaymentPlanDTO implements Serializable {
     @ApiModelProperty(notes = "允许还款的起始日期(YYYY-MM-dd hh:mm:ss)", required = true)
     private String repayTime;
 
-    @ApiModelProperty(notes = "服务费", required = true)
-    private Long serviceFee;
-
-    @ApiModelProperty(notes = "还款的截止日期(YYYY-MM-dd hh:mm:ss)", required = true)
-    private String dueTime;
-
-    @ApiModelProperty(notes = "用户实际已还款的时间(YYYY-MM-dd hh:mm:ss)", required = true)
+    @ApiModelProperty(notes = "用户实际已还款的时间(YYYY-MM-dd hh:mm:ss)")
     private String paidTime;
 
     @ApiModelProperty(notes = "当期本金", required = true)
-    private Long amount;
+    private Long principal;
 
-    @ApiModelProperty(notes = "逾期费用", required = true)
+    @ApiModelProperty(notes = "当期利息", required = true)
+    private Long interest;
+
+    @ApiModelProperty(notes = "服务费", required = true)
+    private Long serviceFee;
+
+    @ApiModelProperty(notes = "逾期费用")
     private Long overdueFee;
 
     @ApiModelProperty(notes = "用户实际应还款金额", required = true)
-    private Long requiedRepayAmount;
+    private Long repayAmount;
 
     @ApiModelProperty(notes = "用户实际已还款金额", required = true)
     private Long paidAmount;
+
+    @ApiModelProperty(notes = "逾期天数")
+    private int overdueDays;
 
     @ApiModelProperty(notes = "还款备注", required = true)
     private String remark;
@@ -51,11 +53,10 @@ public class RepaymentPlanDTO implements Serializable {
         sb.append("repayStatus='").append(repayStatus).append('\'');
         sb.append("repayTime='").append(repayTime).append('\'');
         sb.append("serviceFee='").append(serviceFee).append('\'');
-        sb.append("dueTime='").append(dueTime).append('\'');
         sb.append("paidTime='").append(paidTime).append('\'');
-        sb.append("amount='").append(amount).append('\'');
+        sb.append("principal='").append(principal).append('\'');
         sb.append("overdueFee='").append(overdueFee).append('\'');
-        sb.append("requiedRepayAmount='").append(requiedRepayAmount).append('\'');
+        sb.append("repayAmount='").append(repayAmount).append('\'');
         sb.append("paidAmount='").append(paidAmount).append('\'');
         sb.append("remark='").append(remark).append('\'');
         return sb.toString();
