@@ -27,7 +27,7 @@ public class ApprovalStatusCallBackDTO implements Serializable {
     private int term;
 
     @ApiModelProperty(notes = "期数类型", required = true)
-    private String termType;
+    private int termType;
 
     @ApiModelProperty(notes = "审核利率(万分之一)", required = true)
     private int rate;

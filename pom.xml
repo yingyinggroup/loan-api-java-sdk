@@ -8,6 +8,17 @@
     <artifactId>loan-api-java-sdk</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <url>http://10.100.5.141:8081/content/repositories/yylc-prod/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://10.100.5.141:8081/content/repositories/Snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <properties>
         <java.version>1.6</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>

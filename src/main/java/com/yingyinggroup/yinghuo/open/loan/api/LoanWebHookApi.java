@@ -2,6 +2,7 @@ package com.yingyinggroup.yinghuo.open.loan.api;
 
 import com.yingyinggroup.yinghuo.open.loan.LoanApiClient;
 import com.yingyinggroup.yinghuo.open.loan.request.BankCardBindingNotificationDTO;
+import com.yingyinggroup.yinghuo.open.loan.response.NotificationResponseDTO;
 import feign.Headers;
 import feign.RequestLine;
 
@@ -18,7 +19,7 @@ public interface LoanWebHookApi extends LoanApiClient.Api {
      */
     @RequestLine("POST /api/webhook/loan-api/bank_card_bind_notification")
     @Headers("Content-Type: application/json")
-    void notifyBankCardBindStatus(BankCardBindingNotificationDTO bankCardBindingNotificationDTO);
+    NotificationResponseDTO notifyBankCardBindStatus(BankCardBindingNotificationDTO bankCardBindingNotificationDTO);
 
 
 }
