@@ -17,7 +17,7 @@ public interface LoanWebHookApi extends LoanApiClient.Api {
      *
      * @return
      */
-    @RequestLine("POST /api/webhook/loan-api/bank_card_bind_notification")
+    @RequestLine("POST /open-api/loan-market/merchant/bank_card_bind_notification")
     @Headers("Content-Type: application/json")
     NotificationResponseDTO notifyBankCardBindStatus(BankCardBindingNotificationDTO bankCardBindingNotificationDTO);
 
