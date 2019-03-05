@@ -43,4 +43,16 @@ public interface LoanWebHookApi extends LoanApiClient.Api {
     NotificationResponseDTO orderStatusNotification(OrderStatusCallBackDTO bankCardBindingNotificationDTO);
 
 
+    /**
+     * 订单作废回调
+     *
+     * @return
+     */
+    @RequestLine("POST /open-api/loan-market/merchant/order_invalid_notification")
+    @Headers("Content-Type: application/json")
+    NotificationResponseDTO orderInvalidNotification(String orderNo);
+
+
+
+
 }
