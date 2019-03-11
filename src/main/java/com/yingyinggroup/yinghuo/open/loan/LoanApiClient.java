@@ -3,6 +3,7 @@ package com.yingyinggroup.yinghuo.open.loan;
 import com.yingyinggroup.yinghuo.open.loan.core.YinghuoOpenJsonEncoder;
 import feign.Feign;
 import feign.Logger;
+import feign.Request;
 import feign.gson.GsonDecoder;
 import feign.slf4j.Slf4jLogger;
 
@@ -18,6 +19,7 @@ public class LoanApiClient {
         feignBuilder = Feign.builder()
                 .logger(new Slf4jLogger())
                 .logLevel(Logger.Level.FULL)
+                .options(new Request.Options(60000, 60000))
                 .encoder(new YinghuoOpenJsonEncoder(appKey, appSecret))
                 .decoder(new GsonDecoder());
     }
