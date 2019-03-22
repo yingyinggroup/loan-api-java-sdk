@@ -10,6 +10,7 @@ import java.util.List;
 
 @ApiModel(description = "订单状态DTO")
 @Data
+@Deprecated
 public class OrderStatusCallBackDTO implements Serializable {
 
     @ApiModelProperty(notes = "订单号", required = true)
