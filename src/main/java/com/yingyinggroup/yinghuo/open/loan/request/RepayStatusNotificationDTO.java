@@ -11,6 +11,9 @@ public class RepayStatusNotificationDTO {
     @ApiModelProperty(notes = "订单编号", required = true)
     private String orderNo;
 
+    @ApiModelProperty(notes = "订单状态", required = true)
+    private Integer orderStatus;
+
     @ApiModelProperty(notes = "还款期号", required = true)
     private Integer periodNo;
 
