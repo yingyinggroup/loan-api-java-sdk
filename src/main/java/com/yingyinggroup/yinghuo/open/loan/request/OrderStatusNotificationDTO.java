@@ -23,5 +23,5 @@ public class OrderStatusNotificationDTO {
     private String remark;
 
     @ApiModelProperty(notes = "订单的还款计划", required = true)
-    private List<RepaymentPlanDTO> repaymentPlans;
+    private List<RepayPlanDTO> repaymentPlans;
 }
