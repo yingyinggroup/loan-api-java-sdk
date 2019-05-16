@@ -5,6 +5,7 @@ import com.yingyinggroup.yinghuo.open.loan.request.ApprovalStatusCallBackDTO;
 import com.yingyinggroup.yinghuo.open.loan.request.BankCardBindingNotificationDTO;
 import com.yingyinggroup.yinghuo.open.loan.request.OrderStatusCallBackDTO;
 import com.yingyinggroup.yinghuo.open.loan.request.credit.ApplyResultNotificationDTO;
+import com.yingyinggroup.yinghuo.open.loan.request.credit.RepayPlanNoticationDTO;
 import com.yingyinggroup.yinghuo.open.loan.response.NotificationResponseDTO;
 import feign.Headers;
 import feign.RequestLine;
@@ -56,6 +57,10 @@ public interface LoanWebHookApi extends LoanApiClient.Api {
     @RequestLine(("POST /open-api/loan-market/merchant/credit/apply_result"))
     @Headers("Content-Type: application/json")
     NotificationResponseDTO applyResult(ApplyResultNotificationDTO applyResultNotificationDTO);
+
+    @RequestLine("POST /open-api/loan-market/merchant/credit/repayplans")
+    @Headers("Content-Type: application/json")
+    NotificationResponseDTO repayPlanNotification(RepayPlanNoticationDTO repayPlanNoticationDTO);
 
 
 
