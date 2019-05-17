@@ -8,7 +8,7 @@ import java.util.List;
 
 @ApiModel(description = "授信订单还款计划回调DTO")
 @Data
-public class RepayPlanNoticationDTO {
+public class RepayPlanNotificationDTO {
 
     @ApiModelProperty(notes = "订单编号", required = true)
     private String orderNo;
