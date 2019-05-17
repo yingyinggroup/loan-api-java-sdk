@@ -33,6 +33,12 @@ public class RepayPlan {
     @ApiModelProperty(notes = "偿还完成的时间")
     private Long repaidTime;
 
+    @ApiModelProperty(notes = "利息费用", required = true)
+    private Long interest;
+
+    @ApiModelProperty(notes = "预期天数", required = true)
+    private Integer overdueDays = 0;
+
     @ApiModelProperty(notes = "当前期备注")
     private String remark;
 }
