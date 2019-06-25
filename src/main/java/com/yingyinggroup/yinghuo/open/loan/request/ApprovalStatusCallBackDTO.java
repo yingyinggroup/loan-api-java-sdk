@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 @ApiModel(description = "审核结果DTO")
 @Data
@@ -37,6 +39,9 @@ public class ApprovalStatusCallBackDTO implements Serializable {
 
     @ApiModelProperty(notes = "审核结果说明", required = false)
     private String remark;
+
+    @ApiModelProperty(notes = "可以选择的期数信息， key是期数，value是单位", required = false)
+    private Map<Integer, String> canSelectTerm = new HashMap<Integer, String>();
 
     @Override
     public String toString() {
