@@ -41,7 +41,7 @@ public class ApprovalStatusCallBackDTO implements Serializable {
     private String remark;
 
     @ApiModelProperty(notes = "可以选择的期数信息， key是期数，value是单位", required = false)
-    private Map<Integer, String> canSelectTerm = new HashMap<Integer, String>();
+    private Map<String, String> canSelectTerm = new HashMap<String, String>();
 
     @Override
     public String toString() {
