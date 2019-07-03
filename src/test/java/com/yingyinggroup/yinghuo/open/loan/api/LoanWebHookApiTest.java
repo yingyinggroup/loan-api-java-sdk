@@ -10,17 +10,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * API tests for LoanWebHookApi
  */
 public class LoanWebHookApiTest {
-    public static final String host = "";
-    public static final String APP_KEY = "";
-    public static final String APP_SECRET = "";
+    public static final String host = "http://10.100.2.41:9080";
+    public static final String APP_KEY = "JHc0adb646f6f8439aa50f87adfa142801";
+    public static final String APP_SECRET = "abd61c0cf7b50663f6c9beed2013d234";
     private LoanWebHookApi loanWebHookApi;
 
     private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -43,7 +41,7 @@ public class LoanWebHookApiTest {
         System.out.println("result:" + notificationResponseDTO.getStatus());
     }
 
-    private static final String ORDER_NO ="lo339154471001784320";
+    private static final String ORDER_NO ="lo341302381156368384";
 
     @Test
     public void notifyAudit() {
@@ -55,8 +53,12 @@ public class LoanWebHookApiTest {
         approvalStatusCallBackDTO.setRate(36);
         approvalStatusCallBackDTO.setRateType(4);
         approvalStatusCallBackDTO.setRemark("审核");
-        approvalStatusCallBackDTO.setTerm(3);
-        approvalStatusCallBackDTO.setTermType(5);
+        approvalStatusCallBackDTO.setTerm(4);
+        approvalStatusCallBackDTO.setTermType(6);
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("3", "qi");
+        map.put("4", "qi");
+        approvalStatusCallBackDTO.setCanSelectTerm(map);
         loanWebHookApi.approveStatusNotification(approvalStatusCallBackDTO);
     }
 
