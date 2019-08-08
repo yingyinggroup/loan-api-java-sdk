@@ -3,6 +3,7 @@ package com.yingyinggroup.yinghuo.open.loan.api;
 import com.yingyinggroup.yinghuo.open.loan.LoanApiClient;
 import com.yingyinggroup.yinghuo.open.loan.request.ApprovalStatusCallBackDTO;
 import com.yingyinggroup.yinghuo.open.loan.request.BankCardBindingNotificationDTO;
+import com.yingyinggroup.yinghuo.open.loan.request.CancelRepaySuccessResultReq;
 import com.yingyinggroup.yinghuo.open.loan.request.OrderStatusCallBackDTO;
 import com.yingyinggroup.yinghuo.open.loan.response.NotificationResponseDTO;
 import feign.Headers;
@@ -53,6 +54,14 @@ public interface LoanWebHookApi extends LoanApiClient.Api {
     NotificationResponseDTO orderInvalidNotification(String orderNo);
 
 
+    /**
+     * 撤销还款成功
+     *
+     * @return
+     */
+    @RequestLine("POST /open-api/loan-market/merchant/cancel_repay_success")
+    @Headers("Content-Type: application/json")
+    NotificationResponseDTO cancelRepaySuccessResult(CancelRepaySuccessResultReq req);
 
 
 }
