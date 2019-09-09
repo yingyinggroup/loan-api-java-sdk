@@ -1,10 +1,7 @@
 package com.yingyinggroup.yinghuo.open.loan.api;
 
 import com.yingyinggroup.yinghuo.open.loan.LoanApiClient;
-import com.yingyinggroup.yinghuo.open.loan.request.ApprovalStatusCallBackDTO;
-import com.yingyinggroup.yinghuo.open.loan.request.BankCardBindingNotificationDTO;
-import com.yingyinggroup.yinghuo.open.loan.request.CancelRepaySuccessResultReq;
-import com.yingyinggroup.yinghuo.open.loan.request.OrderStatusCallBackDTO;
+import com.yingyinggroup.yinghuo.open.loan.request.*;
 import com.yingyinggroup.yinghuo.open.loan.response.NotificationResponseDTO;
 import feign.Headers;
 import feign.RequestLine;
@@ -62,6 +59,16 @@ public interface LoanWebHookApi extends LoanApiClient.Api {
     @RequestLine("POST /open-api/loan-market/merchant/cancel_repay_success")
     @Headers("Content-Type: application/json")
     NotificationResponseDTO cancelRepaySuccessResult(CancelRepaySuccessResultReq req);
+
+
+    /**
+     * 拉取用户手机短信列表
+     *
+     * @return
+     */
+    @RequestLine("POST /api/webhook/loan-api/cell_message/v1")
+    @Headers("Content-Type: application/json")
+    Object pullCellMessageInfo(PullCellMessageRequestDTO req);
 
 
 }

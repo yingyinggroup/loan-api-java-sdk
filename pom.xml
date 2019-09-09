@@ -6,7 +6,7 @@
 
     <groupId>com.yingyinglicai.yingghuo</groupId>
     <artifactId>loan-api-java-sdk</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
 
     <properties>
         <java.version>1.6</java.version>
@@ -90,18 +90,19 @@
 
     <repositories>
         <repository>
-            <id>yylc-dev</id>
-            <url>http://10.100.5.141:8081/content/repositories/yylc-dev</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
+            <id>maven-releases</id>
+            <url>http://nexus.yingyingwork.com/repository/maven-releases/</url>
         </repository>
     </repositories>
     <distributionManagement>
         <repository>
-            <id>yylc-dev</id>
-            <url>http://10.100.5.141:8081/content/repositories/yylc-dev</url>
+            <id>maven-releases</id>
+            <url>http://nexus.yingyingwork.com/repository/maven-releases/</url>
         </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://nexus.yingyingwork.com/repository/maven-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
 
 </project>
