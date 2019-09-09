@@ -66,7 +66,7 @@ public interface LoanWebHookApi extends LoanApiClient.Api {
      *
      * @return
      */
-    @RequestLine("POST /api/webhook/loan-api/cell_message/v1")
+    @RequestLine("POST /open-api/loan-market/merchant/pull/cell_message/v1")
     @Headers("Content-Type: application/json")
     Object pullCellMessageInfo(PullCellMessageRequestDTO req);
 

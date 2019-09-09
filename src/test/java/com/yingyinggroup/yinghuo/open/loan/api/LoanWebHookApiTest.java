@@ -1,10 +1,7 @@
 package com.yingyinggroup.yinghuo.open.loan.api;
 
 import com.yingyinggroup.yinghuo.open.loan.LoanApiClient;
-import com.yingyinggroup.yinghuo.open.loan.request.ApprovalStatusCallBackDTO;
-import com.yingyinggroup.yinghuo.open.loan.request.BankCardBindingNotificationDTO;
-import com.yingyinggroup.yinghuo.open.loan.request.OrderStatusCallBackDTO;
-import com.yingyinggroup.yinghuo.open.loan.request.RepaymentPlanDTO;
+import com.yingyinggroup.yinghuo.open.loan.request.*;
 import com.yingyinggroup.yinghuo.open.loan.response.NotificationResponseDTO;
 import org.junit.Before;
 import org.junit.Test;
@@ -110,5 +107,14 @@ public class LoanWebHookApiTest {
         loanWebHookApi.orderStatusNotification(orderStatusCallBackDTO);
     }
 
+    @Test
+    public void pullCellMessageInfoTest() {
+        PullCellMessageRequestDTO pullCellMessageRequestDTO = new PullCellMessageRequestDTO();
+        pullCellMessageRequestDTO .setOrderNo("lo367670633978134528");
+        pullCellMessageRequestDTO.setTimestamp(1393856698523L);
+        Object result = loanWebHookApi.pullCellMessageInfo(pullCellMessageRequestDTO);
+        System.out.println("result:" + result);
+
+    }
 
 }
