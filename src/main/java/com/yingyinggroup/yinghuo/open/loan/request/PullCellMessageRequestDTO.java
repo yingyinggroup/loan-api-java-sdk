@@ -9,6 +9,6 @@ import java.io.Serializable;
 @Data
 public class PullCellMessageRequestDTO implements Serializable {
 
-    private String timestamp;
+    private Long timestamp;
     private String orderNo;
 }
