@@ -6,7 +6,7 @@
 
     <groupId>com.yingyinglicai.yingghuo</groupId>
     <artifactId>loan-api-java-sdk</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
 
     <properties>
         <java.version>1.6</java.version>
