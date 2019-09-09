@@ -19,6 +19,12 @@
         <commons-lang.version>3.8</commons-lang.version>
         <cglib-version>3.2.8</cglib-version>
         <commons-codec-version>1.11</commons-codec-version>
+        <!-- 文件拷贝时的编码 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- 编译时的编码 -->
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+
     </properties>
 
     <dependencies>
