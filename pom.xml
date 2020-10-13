@@ -14,7 +14,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <swagger-core-version>1.5.21</swagger-core-version>
         <feign-version>10.0.1</feign-version>
-        <junit-version>4.12</junit-version>
+        <junit-version>4.13.1</junit-version>
         <maven-plugin-version>1.0.0</maven-plugin-version>
         <commons-lang.version>3.8</commons-lang.version>
         <cglib-version>3.2.8</cglib-version>
